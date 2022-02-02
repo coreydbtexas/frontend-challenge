@@ -1,0 +1,87 @@
+/* RESET */
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  margin: 10px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.puzzle {
+  margin: 0;
+  width: 288px;
+  /* 270 + 18 (borders) */
+  height: 288px;
+  /* 270 + 18 (borders) */
+  border: 9px solid black;
+  background: black;
+  margin: 14px 0 0 14px;
+  list-style: none;
+  font-size: 0;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.puzzle li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border: 7px solid lightgrey;
+  background: white;
+  font-size: 40px;
+  text-align: center;
+  border-style: outset;
+  position: absolute;
+  transition: all 0.15s ease-in-out;
+}
+
+.puzzle li:hover {
+  cursor: pointer;
+}
+
+.puzzle li.incorrect {
+  background-color: #333333;
+  color: #ff0000;
+}
+
+.puzzle li.correct {
+  background-color: #333333;
+  color: #00ff00;
+}
+
+/* set margin 0 for title to fix on zoom */
+@media only screen and (max-height: 300px) {
+  .puzzle {
+    width: 168px;
+    /* 150 + 18 (borders) */
+    height: 168px;
+    /* 150 + 18 (borders) */
+  }
+
+  .puzzle li {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
