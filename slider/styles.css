@@ -1,0 +1,86 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper:hover {
+  cursor: pointer;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title {
+  font-size: 30px;
+}
+
+.description {
+  font-size: 20px;
+  color: gray;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.icon {
+  color: white;
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(to left, #33ccff 0%, #6600ff 100%);
+}
+
+.bg-yellow-gradient {
+  background: linear-gradient(to right, #00ffff 0%, #ffff66 100%);
+}
+
+.bg-red-gradient {
+  background: linear-gradient(to right, #ffff00 0%, #cc0066 100%);
+}
+
+/* set margin 0 for title to fix on zoom */
+@media only screen and (max-height: 300px) {
+  .title {
+    margin: 0;
+  }
+}
